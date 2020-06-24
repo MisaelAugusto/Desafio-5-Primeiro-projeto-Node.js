@@ -31,8 +31,6 @@ class TransactionsRepository {
                       .filter(transaction => transaction.type === "outcome")
                       .reduce((sum, transaction) => sum + transaction.value, 0);
 
-    console.log(income, outcome);
-
     const balance = {
       income,
       outcome,
